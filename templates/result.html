@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h2>Prediction Result</h2>
+
+    <div class="result {{ 'pass' if result == 'PASS' else 'fail' }}">
+        {{ result }}
+    </div>
+
+    <div class="link">
+        <a href="/">Check Another Student</a>
+    </div>
+</div>
+
+</body>
+</html>
