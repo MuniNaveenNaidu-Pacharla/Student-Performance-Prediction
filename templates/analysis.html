@@ -1,21 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Analysis</title>
+    <title>Data Analysis</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
 <div class="container">
-    <h2>Student Data Analysis</h2>
+    <h1>📊 Student Data Analysis</h1>
 
-    <img src="{{ url_for('static', filename='charts/pass_fail.png') }}">
-    <img src="{{ url_for('static', filename='charts/study_marks.png') }}">
+    <div class="charts">
+        <div class="chart-box">
+            <h3>Pass vs Fail Distribution</h3>
+            <img src="{{ url_for('static', filename='charts/pass_fail.png') }}">
+        </div>
+
+        <div class="chart-box">
+            <h3>Study Hours vs Internal Marks</h3>
+            <img src="{{ url_for('static', filename='charts/study_marks.png') }}">
+        </div>
+    </div>
 
     <div class="link">
-        <a href="/">Back to Home</a>
+        <a href="/">⬅ Back to Home</a>
     </div>
 </div>
 
 </body>
 </html>
+

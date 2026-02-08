@@ -1,25 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Student Predictor</title>
+    <title>Student Performance Predictor</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
 <div class="container">
-    <h2>Student Performance Prediction</h2>
+    <h1>🎓 Student Performance Prediction</h1>
+    <p class="subtitle">
+        Predict whether a student will PASS or FAIL using Machine Learning
+    </p>
 
     <form method="POST" action="/predict">
-        <input type="number" name="attendance" placeholder="Attendance (%)" required>
-        <input type="number" name="study_hours" placeholder="Study Hours / Day" required>
-        <input type="number" name="internal_marks" placeholder="Internal Marks" required>
+        <label>Attendance (%)</label>
+        <input type="number" name="attendance" placeholder="Eg: 85" required>
 
-        <button type="submit">Predict Result</button>
+        <label>Study Hours / Day</label>
+        <input type="number" name="study_hours" placeholder="Eg: 4" required>
+
+        <label>Internal Marks</label>
+        <input type="number" name="internal_marks" placeholder="Eg: 75" required>
+
+        <button type="submit">🔍 Predict Result</button>
     </form>
 
     <div class="link">
-        <a href="/analysis">View Data Analysis</a>
+        <a href="/analysis">📊 View Data Analysis</a>
     </div>
+
+    <footer>
+        <p>Built using Python, Machine Learning & Flask</p>
+    </footer>
 </div>
 
 </body>

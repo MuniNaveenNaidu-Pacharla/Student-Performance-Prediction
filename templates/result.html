@@ -1,22 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Result</title>
+    <title>Prediction Result</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
 <div class="container">
-    <h2>Prediction Result</h2>
+    <h1>📌 Prediction Result</h1>
 
     <div class="result {{ 'pass' if result == 'PASS' else 'fail' }}">
         {{ result }}
     </div>
 
+    <p class="note">
+        This prediction is based on attendance, study hours, and internal marks.
+    </p>
+
     <div class="link">
-        <a href="/">Check Another Student</a>
+        <a href="/">🔁 Predict Another Student</a>
     </div>
 </div>
 
 </body>
 </html>
+
